@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import './styles.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './ErrorPage.tsx';
 import { countriesLoader } from '../utils/loaders.ts';
 import { queryClient } from '../utils/query-client.ts';
@@ -11,7 +11,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { CountryListPage } from './CountryListPage.tsx';
 import React from 'react';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
